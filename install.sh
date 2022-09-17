@@ -9,13 +9,15 @@
 #############################################################################################################
 
 #Brew & Wget installation
-echo "[!] Installing Brew and Wget..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "[!] Installing Wget..."
+#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install wget
 
 echo "******* NOTICE:ROOT PRIVILEGE IS NEEDED *******"
-read -p "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):" password
+read -e -p "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):" -i "password@123" password
 echo "Your SQL SA password is:"$password
+read -e -p "Please enter your container name:" -i "mssqledge" containername
+echo "Your container name is:"$containername
 
 # Docker Desktop installation
 echo "[!] Installing Docker Desktop..."
@@ -35,12 +37,12 @@ then
     sudo docker pull mcr.microsoft.com/azure-sql-edge
 fi
 
-if [[ $(docker ps -a | grep 'mssqledge') ]]
+if [[ $(docker ps -a | grep $containername) ]]
 then
     echo "Instance mssqledge found. Terminating..."
-    sudo docker stop mssqledge
-    sudo docker container rm mssqledge
+    sudo docker stop $containername
+    sudo docker container rm $containername
 fi
 
-sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer" -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name=mssqledge -d mcr.microsoft.com/azure-sql-edge
+sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer" -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name=$containername -d mcr.microsoft.com/azure-sql-edge
 
