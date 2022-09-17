@@ -14,12 +14,12 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 
 1. Start a new terminal and enter the command below to install [Brew](https://brew.sh/) on your computer:
 ```
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Once you have finished installing curl, continue to type the command below, which will run the script without downloading it on your computer:
 ```
-curl -L https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/install.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/install.sh)"
 ```
 
 
@@ -33,7 +33,7 @@ NOTICE: This line of prompt is different from ```Password:``` where your compute
 
 Start a new terminal and enter the command below to reset your Azure SQL Edge container:
 ```
-curl -L https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh | bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh)"
 ```
 
 ### For restoring AdventureWorks2019.bak
