@@ -31,8 +31,9 @@ NOTICE: This line of prompt is different from ```Password:``` where your compute
 
 ### For altering your SA password
 
-1. Start a new terminal and enter the command below to install [Brew](https://brew.sh/) on your computer:
+Start a new terminal and enter the command below to reset your Azure SQL Edge container:
 ```
 curl -L https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh | bash
 ```
+
 
