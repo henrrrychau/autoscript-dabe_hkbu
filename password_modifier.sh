@@ -10,8 +10,10 @@
 
 
 echo "******* NOTICE:ROOT PRIVILEGE IS NEEDED *******"
-read -p "Please enter your password for MSSQL sa user (upper-case and lower-case letters and at least one symbol should be contained):" password
+read -e -p "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):" -i "password@123" password
 echo "Your SQL SA password is:"$password
+read -e -p "Please enter your container name:" -i "mssqledge" containername
+echo "Your container name is:"$containername
 
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
