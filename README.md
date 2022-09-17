@@ -14,7 +14,7 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 
 1. Start a new terminal and enter the command below to install [Brew](https://brew.sh/) on your computer:
 ```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 ```
 
 2. Once you have finished installing curl, continue to type the command below, which will run the script without downloading it on your computer:
