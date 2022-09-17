@@ -1,6 +1,6 @@
 ## An automatic solution for DABE Students@HKBU
 
-Since Microsoft SQL Server is not compatible with Mac OS and a number of students have been undergoing knotty problems during installation, an automatic solution is here for DABE students of HKBU to automatically configure Azure SQL Edge on Mac OS.
+Since Microsoft SQL Server is not compatible with Mac OS and a number of students have been undergoing knotty problems during installation, an automatic solution is here for DABE students of HKBU to configure Azure SQL Edge on Mac OS.
 
 ## Main files
 
