@@ -36,4 +36,6 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 curl -L https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh | bash
 ```
 
+### For restoring AdventureWorks2019.bak
+Please refer to [this](https://learn.microsoft.com/en-us/sql/azure-data-studio/tutorial-backup-restore-sql-server?view=sql-server-ver16).
 
