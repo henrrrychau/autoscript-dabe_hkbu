@@ -22,12 +22,12 @@ then
     sudo docker pull mcr.microsoft.com/azure-sql-edge
 fi
 
-if [[ $(docker ps -a | grep 'mssqledge') ]]
+if [[ $(docker ps -a | grep $containername) ]]
 then
-    echo "Instance mssqledge found. Terminating..."
-    sudo docker stop mssqledge
-    sudo docker container rm mssqledge
+    echo "Instance $containername found. Terminating..."
+    sudo docker stop $containername
+    sudo docker container rm $containername
 fi
 
-sudo docker run --cap-add SYS_PTRACE -e "MSSQL_PID=Developer" -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name mssqledge -d mcr.microsoft.com/azure-sql-edge
+sudo docker run --cap-add SYS_PTRACE -e "MSSQL_PID=Developer" -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name=$containername -d mcr.microsoft.com/azure-sql-edge
 
