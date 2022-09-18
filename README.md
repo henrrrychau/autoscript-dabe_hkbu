@@ -12,21 +12,18 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 
 ### For your first-time installation
 
-1. Start a new terminal and enter the command below to install [Brew](https://brew.sh/) on your computer:
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
 
-2. Once you have finished installing curl, continue to type the command below, which will run the script without downloading it on your computer:
+1. Start a new terminal and enter the command below, which will run the script without downloading it on your computer:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/install.sh)"
 ```
 
 
-3. You will see this, which requires you to input your SA password:
+2. You will see this, which requires you to input your SA password:
 ```
 Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):
 ```
+Please just enter your SA password encompassing upper or lower case alphabets, symbols and numbers.
 NOTICE: This line of prompt is different from ```Password:``` where your computer account password is required(__NOT THE PASSWORD FOR YOUR MSSQL SA USER__) and what you enter won't be displayed
 
 ### For altering your SA password
