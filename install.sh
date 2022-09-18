@@ -9,8 +9,8 @@
 #############################################################################################################
 
 #Brew & Wget installation
-echo "[!] Installing Wget..."
-#/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "[!] Installing Brew & Wget..."
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install wget
 
 echo "******* NOTICE:ROOT PRIVILEGE IS NEEDED *******"
