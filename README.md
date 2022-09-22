@@ -1,6 +1,6 @@
 ## An automatic solution for DABE Students@HKBU
 
-Since Microsoft SQL Server is not compatible with Mac OS and a number of students have been undergoing knotty problems during installation, an automatic solution is here for DABE students of HKBU to configure Azure SQL Edge on Mac OS.
+Since Microsoft SQL Server is not compatible with Mac OS and a number of students have been undergoing knotty problems during installation, an automatic solution is here for DABE students of HKBU to configure Docker and Azure SQL Edge on Mac OS.
 
 ## Main files
 
@@ -33,6 +33,6 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh)"
 ```
 
-### For restoring AdventureWorks2019.bak
+### For restoring AdventureWorks****.bak
 Download your own [BAK file](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) and refer to [this](https://learn.microsoft.com/en-us/sql/azure-data-studio/tutorial-backup-restore-sql-server?view=sql-server-ver16).
 
