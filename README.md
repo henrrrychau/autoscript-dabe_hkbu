@@ -33,6 +33,9 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh)"
 ```
 
+### For connecting to your Azure SQL Edge Server
+Please refer to (this)[], remember to enter
+
 ### For restoring AdventureWorks****.bak
 Download your own [BAK file](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) and refer to [this](https://learn.microsoft.com/en-us/sql/azure-data-studio/tutorial-backup-restore-sql-server?view=sql-server-ver16).
 
