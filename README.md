@@ -34,7 +34,7 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 ```
 
 ### For connecting to your Azure SQL Edge Server
-Please remember to modify the __Server__ field as below
+Please remember to modify the __Server__ field on Azure Data Studio as below
 ![Connection Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/connectiondetails.png?raw=true)
 
 ### For restoring AdventureWorks****.bak
