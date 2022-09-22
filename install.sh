@@ -27,9 +27,9 @@ sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
 sudo hdiutil detach /Volumes/Dockers
 
 # Azure Data Studio installation
-echo "[!] Installing Azure Data Studio..."
-sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
-sudo unzip ./azuresqlstudio.zip
+#echo "[!] Installing Azure Data Studio..."
+#sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
+#sudo unzip ./azuresqlstudio.zip
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
 then
