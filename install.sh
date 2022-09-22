@@ -14,9 +14,11 @@ echo "[!] Installing Brew & Wget..."
 brew install wget
 
 echo "******* NOTICE:ROOT PRIVILEGE IS NEEDED *******"
-read -e -p "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):" -i "password@123" password
+echo "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained e.g. password@123):"
+read password
 echo "Your SQL SA password is:"$password
-read -e -p "Please enter your container name:" -i "mssqledge" containername
+echo "Please enter your container name(e.g. mssqledge):"
+read containername
 echo "Your container name is:"$containername
 
 # Docker Desktop installation
