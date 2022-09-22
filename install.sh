@@ -44,5 +44,7 @@ then
     sudo docker container rm $containername
 fi
 
+sleep 2
+
 sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer" -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name=$containername -d mcr.microsoft.com/azure-sql-edge
 
