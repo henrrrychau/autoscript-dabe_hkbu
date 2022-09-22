@@ -28,11 +28,6 @@ sudo hdiutil attach ./docker.dmg
 sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
 sudo hdiutil detach /Volumes/Dockers
 
-# Azure Data Studio installation
-#echo "[!] Installing Azure Data Studio..."
-#sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
-#sudo unzip ./azuresqlstudio.zip
-
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
 then
     echo "Azure-SQL-Edge not installed! Pulling..."
@@ -50,3 +45,7 @@ sleep 2
 
 sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer" -e 'MSSQL_SA_PASSWORD='$password -p 1433:1401 --name=$containername -d mcr.microsoft.com/azure-sql-edge
 
+# Azure Data Studio installation
+echo "[!] Installing Azure Data Studio..."
+sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
+sudo unzip ./azuresqlstudio.zip
