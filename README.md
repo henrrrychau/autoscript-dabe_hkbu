@@ -18,8 +18,7 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/install.sh)"
 ```
 
-
-2. You will see this, which requires you to input your SA password:
+2. Then you will see this, which requires you to input your SA password:
 ```
 Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):
 ```
@@ -33,8 +32,8 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/password_modifier.sh)"
 ```
 
-### For connecting to your Azure SQL Edge Server
-Please remember to modify the __Server__ field on Azure Data Studio as below
+### Notice for Azure Data Studio
+Please remember to modify the __Server__ field on Azure Data Studio as below while you are connecting to your Azure SQL Edge Server:
 ![Connection Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/connectiondetails.png?raw=true)
 
 ### For restoring AdventureWorks****.bak
