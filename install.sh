@@ -48,11 +48,11 @@ sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer"
 # Azure Data Studio installation
 echo "Do you need Azure Data Studio? (Please enter y or n):"
 read ans
-if [[ ans == 'y' || ans == 'Y' ]]
+if [[ $ans == 'y' || $ans == 'Y' || $ans == 'yes' || $ans == 'YES' || $ans == 'Yes' ]]
 then
     echo "[!] Installing Azure Data Studio..."
     sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
-    sudo unzip ./azuresqlstudio.zip
+    sudo unzip ./azuresqlstudio.zip && sudo mv ./"Azure Data Studio.app" /Applications/"Azure Data Studio.app" && sudo rm -rf ./azuresqlstudio.zip ./"Azure Data Studio.app"
     echo "Done!"
 else
     echo "Done!"
