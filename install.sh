@@ -46,6 +46,14 @@ sleep 2
 sudo docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e "MSSQL_PID=Developer" -e 'MSSQL_SA_PASSWORD='$password -p 1401:1433 --name=$containername -d mcr.microsoft.com/azure-sql-edge
 
 # Azure Data Studio installation
-echo "[!] Installing Azure Data Studio..."
-sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
-sudo unzip ./azuresqlstudio.zip
+echo "Do you need Azure Data Studio? (Please enter y or n):"
+read ans
+if [[ ans == 'y' || ans == 'Y' ]]
+then
+    echo "[!] Installing Azure Data Studio..."
+    sudo wget -O ./azuresqlstudio.zip --max-redirect=20 https://go.microsoft.com/fwlink/?linkid=2204569
+    sudo unzip ./azuresqlstudio.zip
+    echo "Done!"
+else
+    echo "Done!"
+fi
