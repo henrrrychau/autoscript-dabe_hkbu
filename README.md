@@ -25,7 +25,7 @@ Please just enter your SA password encompassing upper or lower case alphabets, s
 
 NOTICE: This line of prompt is different from ```Password:``` where your computer account password is required(__NOT THE PASSWORD FOR YOUR MSSQL SA USER__) and what you enter won't be displayed
 
-NOTICE: Please DO REMEMBER TO ALLOW the newly downloaded DOCKER DESKTOP TO OPEN if the following window pops out: 
+NOTICE: Please **DO REMEMBER TO ALLOW TO OPEN** the newly downloaded **DOCKER DESKTOP** if the following window pops out: 
 ![Docker Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/allow_to_open.png?raw=true)
 
 ### For altering your SA password
