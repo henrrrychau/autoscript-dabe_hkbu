@@ -28,6 +28,8 @@ sudo hdiutil attach ./docker.dmg
 sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
 sudo hdiutil detach /Volumes/Dockers
 
+brew install --cask docker
+
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
 then
     echo "Azure-SQL-Edge not installed! Pulling..."
