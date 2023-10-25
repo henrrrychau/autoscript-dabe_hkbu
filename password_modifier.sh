@@ -15,7 +15,8 @@ read password
 echo "Your SQL SA password is:"$password
 echo "Please enter your container name(e.g. mssqledge):"
 read containername
-echo "Your container name is:"$containername
+echo "This is the 
+echo "Your OLD container name is (You can check it with 'docker ps'):"$containername
 
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
