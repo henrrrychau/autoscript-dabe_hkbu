@@ -13,6 +13,13 @@ echo "[!] Installing Brew & Wget..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install wget
 
+# Docker Desktop installation
+echo "[!] Installing Docker Desktop..."
+brew install --cask docker
+osascript -e 'quit app "Docker"'
+sleep 2
+open -a docker
+
 echo "******* NOTICE:ROOT PRIVILEGE IS NEEDED *******"
 echo "Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained e.g. password@123):"
 read password
@@ -20,13 +27,6 @@ echo "Your SQL SA password is:"$password
 echo "Please enter your container name(e.g. mssqledge):"
 read containername
 echo "Your container name is:"$containername
-
-# Docker Desktop installation
-echo "[!] Installing Docker Desktop..."
-brew install --cask docker
-osascript -e 'quit app "Docker"'
-sleep 2
-open -a docker
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
 then
