@@ -23,11 +23,6 @@ echo "Your container name is:"$containername
 
 # Docker Desktop installation
 echo "[!] Installing Docker Desktop..."
-sudo wget -O ./docker.dmg --max-redirect=20 https://desktop.docker.com/mac/main/arm64/Docker.dmg?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module
-sudo hdiutil attach ./docker.dmg
-sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
-sudo hdiutil detach /Volumes/Dockers
-
 brew install --cask docker
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
