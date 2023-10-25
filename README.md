@@ -12,7 +12,6 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 
 ### For your first-time installation
 
-
 1. Start a new terminal and enter the command below, which will run the script without downloading it on your computer:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/henrrrychau/autoscript-dabe_hkbu/main/install.sh)"
@@ -22,8 +21,12 @@ Since Microsoft SQL Server is not compatible with Mac OS and a number of student
 ```
 Please enter your password for MSSQL sa user (upper-or-lower-case alphabets, at least one symbol and one number should be contained):
 ```
-Please just enter your SA password encompassing upper or lower case alphabets, symbols and numbers.
+Please just enter your SA password encompassing upper or lower case alphabets, symbols and numbers. 
+
 NOTICE: This line of prompt is different from ```Password:``` where your computer account password is required(__NOT THE PASSWORD FOR YOUR MSSQL SA USER__) and what you enter won't be displayed
+
+NOTICE: Please DO REMEMBER TO ALLOW the newly downloaded DOCKER DESKTOP TO OPEN if the following window pops out: 
+![Docker Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/allow_to_open.png?raw=true)
 
 ### For altering your SA password
 
