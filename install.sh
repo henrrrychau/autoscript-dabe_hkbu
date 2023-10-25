@@ -24,6 +24,8 @@ echo "Your container name is:"$containername
 # Docker Desktop installation
 echo "[!] Installing Docker Desktop..."
 brew install --cask docker
+osascript -e 'quit app "Docker"'
+open -a docker
 
 if [[ -z $(docker images | grep 'azure-sql-edge') ]]
 then
