@@ -8,14 +8,14 @@
 # Github        :  https://github.com/henrrrychau                                           
 #############################################################################################################
 
-#Brew & Wget installation
-echo "[!] Installing Brew & Wget..."
+# brew & Wget installation
+echo "[!] Installing brew & Wget..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install wget
+/opt/homebrew/bin/brew install wget
 
 # Docker Desktop installation
 echo "[!] Installing Docker Desktop..."
-brew install --cask docker
+/opt/homebrew/bin/brew install --cask docker
 osascript -e 'quit app "Docker"'
 sleep 2
 open -a docker
