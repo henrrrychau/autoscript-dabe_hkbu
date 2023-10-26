@@ -36,6 +36,12 @@ Start a new terminal and enter the command below to reset your Azure SQL Edge co
 Please remember to modify the __Server__ field on Azure Data Studio as below while you are connecting to your Azure SQL Edge Server:
 ![Connection Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/connectiondetails.png?raw=true)
 
+### Notice for Mac older than M1
+please type the command on your terminal first:
+```
+echo "export Path=/usr/local/bin:$PATH" >> ~/.bash_profile && source  ~/.bash_profile
+```
+
 ### Notice for Docker Desktop
 Please **DO REMEMBER TO ALLOW TO OPEN** the newly downloaded **DOCKER DESKTOP** if the following window pops out: 
 ![Docker Details](https://github.com/henrrrychau/autoscript-dabe_hkbu/blob/main/allow_to_open.png?raw=true)
