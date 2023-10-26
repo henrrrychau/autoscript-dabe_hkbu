@@ -11,11 +11,12 @@
 # brew & Wget installation
 echo "[!] Installing brew & Wget..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-/opt/homebrew/bin/brew install wget
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
+brew install wget
 
 # Docker Desktop installation
 echo "[!] Installing Docker Desktop..."
-/opt/homebrew/bin/brew install --cask docker
+brew install --cask docker
 osascript -e 'quit app "Docker"'
 sleep 2
 open -a docker
